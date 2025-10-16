@@ -16,13 +16,28 @@ body {
   font-weight: bold;
   font-style: normal;
 }
+.pc {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+.sp {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
 
+img {
+	width: 100%;
+	height: auto;
+}
 
 
 .inner {
   width: 100%;
   max-width: 880px;
   padding-inline: 30px;
+	margin-inline: auto;
   	@media screen and (max-width: 767px) {
       padding-inline: 20px;
     }
