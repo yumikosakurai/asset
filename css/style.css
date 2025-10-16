@@ -21,7 +21,7 @@ body {
 
 .inner {
   width: 100%;
-  max-width: 940px;
+  max-width: 880px;
   padding-inline: 30px;
   	@media screen and (max-width: 767px) {
       padding-inline: 20px;
