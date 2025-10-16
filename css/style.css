@@ -41,6 +41,14 @@ img {
       padding-inline: 20px;
     }
 }
+.header {
+	width: 100%;
+	background-color: aquamarine;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 1000; 
+}
 .header .inner {
 	display: flex;
 	justify-content: space-between;
@@ -50,7 +58,9 @@ img {
 		display: flex;
 		column-gap: 0.951rem;
 		align-items: center;
-
+		scroll-padding-top: 50px;
+	  transition-duration: 0.4s;
+	  height: 100%;
 
 }
 .site-title img  {
@@ -66,6 +76,10 @@ img {
 	display: flex;
 	align-items: center;
 }
+
+.site-title h1 a:hover {
+		opacity: 0.5;
+}
 .header__nav ul {
 	display: flex;
 	column-gap: 1rem;
@@ -73,9 +87,18 @@ img {
 
 }
 .header__nav ul li a {
-		height: 5rem;
+	height: 5rem;
 	font-size: 1.4rem;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
+}
+.header__nav a {
+		transition: opacity 0.3s ease; /* 変化にアニメーションを付ける */
+  cursor: pointer; /* マウスオーバーで手の形に */
+
+}
+
+.header__nav a:hover {
+	opacity: 0.5;
 }
