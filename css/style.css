@@ -31,7 +31,6 @@ img {
 	width: 100%;
 	height: auto;
 }
-
 .inner {
   width: 100%;
   max-width: 880px;
@@ -108,8 +107,13 @@ img {
 }
 
 .fv {
-	width: 100%;
-	padding-block-start: 50px;
+	width: 100vw;
+	padding-block-start: 50px;position: relative;
+  left: 50%;          /* 親(inner)の中央基準に */
+  right: 50%;
+  margin-left: -50vw; /* 画面全体分マイナスにして幅を広げる */
+  margin-right: -50vw;
+  overflow: hidden; 
 }
 
 picture {
