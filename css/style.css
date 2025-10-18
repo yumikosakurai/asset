@@ -125,13 +125,17 @@ picture {
 }
 .fv__contents {
 position: absolute;
-top: calc(152 / 1080 * 100%);
-/* top: 152px; */
+/* top: calc(152 / 1080 * 100%); */
+top: 152px;
 background-color: rgba(255, 255, 255, 0.72);
-width: calc(493 / 1080 * 100%);
-/* width: 493px; */
-height:  calc(210 / 500 * 100%);
-/* height: 210px; */
+/* width: calc(493 / 1080 * 100%); */
+width: 493px;
+/* height:  calc(210 / 500 * 100%); */
+height: 210px;
+}
+.fv__text {
+	padding-top: 60px;
+	padding-bottom: 107px;
 }
 .catch-name {
 	font-size: 25px;
@@ -166,24 +170,29 @@ height:  calc(210 / 500 * 100%);
 	color: #0D96A0;
 	display: flex;
 	justify-content: center;
-	padding-top: 60px;
+	/* padding-top: 60px; */
  }
- .fv-chtch {
+ .fv-catch {
 	font-size: 18px;
 	font-weight: 500;
-	line-height: calc(33 / 18);
-	display: flex;
-	justify-content: center;
-
-
+	line-height: 1.833;
+	text-align: center; /* 各行の中央をそろえる */
+  margin: 0 auto;
+	padding-top: 9px;
  }
-.fv-chtch .a {
+.fv-catch  p {
+	margin: 0;
+}
+
+
+/* .fv-catch .a {
 	display: flex;
 	justify-content: center;
 
-}
+} */
 .icon-t {
 	text-align: right;
+	transform: translate(-9%,-70%);
 }
 .site-icon-thin {
 	width: 83.75px;
