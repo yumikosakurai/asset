@@ -199,5 +199,20 @@ height: 210px;
 	height: 77.12px;
 }
 
+/* ここから強み */
+.title-wrap {
+  display: flex;              /* 横並びにする */
+  align-items: center;        /* 縦方向の中央揃え */
+  justify-content: center;    /* 全体を中央揃え */
+  gap: 10px;                  /* アイコンとタイトルの間隔 */
+}
 
- 
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.icon {
+  width: 24px;  /* アイコンのサイズを指定 */
+  height: auto;
+} 
