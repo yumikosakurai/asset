@@ -34,7 +34,7 @@ img {
 }
 .inner {
   width: 100%;
-  max-width: 880px;
+  max-width: 940px;
   padding-inline: 3rem;
 	margin-inline: auto;
   	@media screen and (max-width: 767px) {
@@ -208,8 +208,8 @@ height: 21.0rem;
   display: flex;              
   align-items: center;        
   justify-content: center;   
-  gap: 1rem; 
-	padding-top: 2.2rem;                 
+  gap: 1rem;
+	padding-top: 6.3rem; 
 }
 .title {
   font-size: 2.4rem;
@@ -266,6 +266,7 @@ h3 {
 
 .service-text {
 	padding-top: 1.9rem;
+	padding-bottom: 5.9rem;
 }
 
 }
@@ -281,5 +282,65 @@ h3 {
 	font-weight: 500;
 	line-height: calc(30 / 17);
 	padding-top: 0.8rem;
+}
+
+/* ここからニュース */
+.news {
+	padding-bottom: 6.8rem;
+	background-color: rgba(13, 150, 160, 0.102);
+
+	
+}
+.border-texts {
+	padding-top: 5.2rem;
+}
+
+.news-items {
+	/* list-style: none;     ・マークを消す 
+  margin: 0;
+  padding: 0; */
+  width: 95%;            /* 任意の幅（例：80%） */
+  margin: 0 auto; 
+}	       
+.news-items li {
+  border-top: 1px solid #000; /* 上の線 */
+  padding: 17px 0;           
+}
+
+.news-items li:last-child {
+  border-bottom: 1px solid #000; /* 最後の線 */
+}
+
+.news-link {
+	display: flex;
+	/* align-items: center; */
+	gap: 25px;
+	padding-left: 1.9rem;
+	align-items: flex-start;
+	
+}
+.news-date {
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: calc(25 / 17);
+	width: 9.2rem;
+	/* flex-shrink: 0; */
+}
+.news-title {
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: calc(25 / 20);
+	color: #0D96A0;
+	width: 16rem;
+	/* flex-shrink: 0; */
+	text-align: left;
+}
+.news-text {
+	font-size: 1.7rem;
+	font-weight: 500;
+	line-height: calc(30 / 17);
+	flex: 1;
+	text-align: left;
+
 
 }
