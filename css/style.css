@@ -15,6 +15,7 @@ body {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+	color: #505050;
 }
 .pc {
 	@media screen and (max-width: 767px) {
@@ -34,10 +35,10 @@ img {
 .inner {
   width: 100%;
   max-width: 880px;
-  padding-inline: 30px;
+  padding-inline: 3rem;
 	margin-inline: auto;
   	@media screen and (max-width: 767px) {
-      padding-inline: 20px;
+      padding-inline: 2rem;
     }
 }
 .header {
@@ -57,12 +58,12 @@ img {
 		display: flex;
 		column-gap: 0.951rem;
 		align-items: center;
-		scroll-padding-top: 50px;
+		scroll-padding-top: 5rem;
 	  transition-duration: 0.4s;
 	  height: 100%;
 
 }
-.site-title img  {
+.site-icon  {
 	width: 2.549rem;
 	height: 2.5rem;
 	display: flex;
@@ -104,7 +105,7 @@ img {
   /* ここからmain */
 .main {
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 5rem;
 }
 
 .fv {
@@ -126,23 +127,23 @@ picture {
 .fv__contents {
 position: absolute;
 /* top: calc(152 / 1080 * 100%); */
-top: 152px;
+top: 15.2rem;
 background-color: rgba(255, 255, 255, 0.72);
 /* width: calc(493 / 1080 * 100%); */
-width: 493px;
+width: 49.3rem;
 /* height:  calc(210 / 500 * 100%); */
-height: 210px;
+height: 21.0rem;
 }
 .fv__text {
-	padding-top: 60px;
-	padding-bottom: 107px;
+	padding-top: 6rem;
+	padding-bottom: 10.7rem;
 }
 .catch-name {
-	font-size: 25px;
+	font-size: 2.5rem;
 	font-weight: bold;
 	/* left: 99px;
 	top: 23px; */
-	translate: 99px 23px;
+	translate: 9.9rem 2.3rem;
 	/* text-align: center; */
 	/* top: 175px; */
 	white-space: nowrap;
@@ -150,21 +151,21 @@ height: 210px;
 	color: #505050;
 }
 .catch-text {
-	font-size: 40px;
+	font-size: 4rem;
 	color: #0D96A0;
 	line-height: calc(60 / 40);
 	font-weight: bold;
 	text-indent: 0;
-	translate: 99px 34px;
+	translate: 9.9rem 3.4rem;
 	/* translate: 99px 34px; */
 	/* text-align: center; */
-	max-width: 492px;
+	max-width: 49.2rem;
 }
 /* .overlay {
   background-color: rgba(255, 255, 255, 0.7); 白＋70%の不透明度
 } */
  .fv__text h2 {
-	font-size: 30px;
+	font-size: 3rem;
 	font-weight: bold;
 	line-height: calc(50 / 30);
 	color: #0D96A0;
@@ -173,12 +174,12 @@ height: 210px;
 	/* padding-top: 60px; */
  }
  .fv-catch {
-	font-size: 18px;
+	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: 1.833;
 	text-align: center; /* 各行の中央をそろえる */
   margin: 0 auto;
-	padding-top: 9px;
+	padding-top: 0.9rem
  }
 .fv-catch  p {
 	margin: 0;
@@ -195,24 +196,90 @@ height: 210px;
 	transform: translate(-9%,-70%);
 }
 .site-icon-thin {
-	width: 83.75px;
-	height: 77.12px;
+	width: 8.375rem;
+	height: 7.712rem;
 }
 
 /* ここから強み */
-.title-wrap {
-  display: flex;              /* 横並びにする */
-  align-items: center;        /* 縦方向の中央揃え */
-  justify-content: center;    /* 全体を中央揃え */
-  gap: 10px;                  /* アイコンとタイトルの間隔 */
+.strengths {
+	background-color: rgba(13, 150, 160, 0.102);
 }
-
+.title-wrap {
+  display: flex;              
+  align-items: center;        
+  justify-content: center;   
+  gap: 1rem; 
+	padding-top: 2.2rem;                 
+}
 .title {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: bold;
 }
 
-.icon {
-  width: 24px;  /* アイコンのサイズを指定 */
+.strengths-images {
+	display: block;
+}
+
+.strengths-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4.5rem;
+	max-width: 880px;
+	margin: 0 auto;
+	padding: 3rem;
+}
+.strengths-item-re{
+	flex-direction: row-reverse;
+}
+.strengths-text {
+	flex: 1;
+}
+h3 {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: calc(33 / 22);
+	white-space: nowrap;
+}
+.strengths-text p {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: calc(33 / 18);
+  padding-top: 1.9rem;
+}
+.strengths-image {
+	flex: 1;
+	/* width: calc(440 / 880 *100%); */
+	width: 44rem;
+}
+.strngths-image img {
+	width: 100%;           /* 枠いっぱいに画像を表示 */
   height: auto;
-} 
+  display: block;
+}
+.service-items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5rem;
+	padding-top: 5.4rem;
+
+.service-text {
+	padding-top: 1.9rem;
+}
+
+}
+.service-text h4 {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: calc(25 / 20);
+	text-align: center;
+	
+}
+.service-text p {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: calc(30 / 17);
+	padding-top: 0.8rem;
+
+}
