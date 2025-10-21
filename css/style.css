@@ -142,29 +142,45 @@ picture {
 }
 .fv__contents {
 position: absolute;
-/* top: calc(152 / 1080 * 100%); */
-top: 15.2rem;
+left: 0;
+top: 50%;
+transform: translateY(-90%);
+/* top: calc(152 / 784 * 100%); */
 background-color: rgba(255, 255, 255, 0.72);
 /* width: calc(493 / 1080 * 100%); */
-width: 49.3rem;
-/* height:  calc(210 / 500 * 100%); */
-height: 21.0rem;
+/* height:  calc(210 / 784 * 100%); */
+width: 492px;
+height: 21rem;
+flex-direction: column;
+
+@media screen and (max-width:767px) {
+	/* top: calc(452 / 985 * 100%); */
+	top: 402px;
+	width: 311px;
+	height: 148px;
+	top: 53.6%;
+}
 }
 .fv__text {
 	padding-top: 6rem;
-	padding-bottom: 10.7rem;
+	/* padding-bottom: 10.7rem; */
+	@media screen and (max-width:767px) {
+  padding-top: 4.9rem;
+	text-align: center; /* 各行の中央をそろえる */
+  margin: 0 auto;
+
+}
 }
 .catch-name {
 	font-size: 2.5rem;
-	/* font-weight: bold; */
-	/* left: 99px;
-	top: 23px; */
 	translate: 9.9rem 2.3rem;
-	/* text-align: center; */
-	/* top: 175px; */
 	white-space: nowrap;
-	/* max-width: 492px; */
 	color: #505050;
+	@media screen and (max-width:767px) {
+		font-size: 2rem;
+		justify-content: left;
+		translate: 1.8rem 2rem;
+	}
 }
 .catch-text {
 	font-size: 4rem;
@@ -176,10 +192,15 @@ height: 21.0rem;
 	/* translate: 99px 34px; */
 	/* text-align: center; */
 	max-width: 49.2rem;
+	@media screen and (max-width:767px) {
+		font-size: 3rem;
+		line-height: calc(40 / 30);
+		justify-content: left;
+    transform: translate(-25%)
+
+	}
+
 }
-/* .overlay {
-  background-color: rgba(255, 255, 255, 0.7); 白＋70%の不透明度
-} */
  .fv__text h2 {
 	font-size: 3rem;
 	/* font-weight: bold; */
@@ -188,7 +209,10 @@ height: 21.0rem;
 	display: flex;
 	justify-content: center;
 	/* padding-top: 60px; */
+		@media screen and (max-width:767px) {
+		font-size: 2.5rem;
  }
+}
  .fv-catch {
 	font-size: 1.8rem;
 	font-weight: 500;
@@ -196,7 +220,13 @@ height: 21.0rem;
 	text-align: center; /* 各行の中央をそろえる */
   margin: 0 auto;
 	padding-top: 0.9rem
+}
+.fv-catch {
+		@media screen and (max-width:767px) {
+		text-align: left;
  }
+
+}
 .fv-catch  p {
 	margin: 0;
 }
@@ -210,6 +240,11 @@ height: 21.0rem;
 .icon-t {
 	text-align: right;
 	transform: translate(-9%,-70%);
+	@media screen and (max-width:767px) {
+	transform: translate(-9%,-70%);	
+ }
+
+
 }
 .site-icon-thin {
 	width: 8.375rem;
@@ -250,6 +285,11 @@ height: 21.0rem;
 }
 .strengths-text {
 	flex: 1;
+	@media screen and (max-width:767px) {
+		text-align: center; /* 各行の中央をそろえる */
+  	margin: 0 auto;
+
+	}
 }
 h3 {
 	font-size: 22px;
