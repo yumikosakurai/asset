@@ -366,6 +366,7 @@ h3 {
 			font-size: 2rem;
 			line-height: calc(30 / 20);
 			white-space: nowrap;
+			text-align: center;
 		}
 }
 .strengths-text p {
