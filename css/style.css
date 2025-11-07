@@ -820,6 +820,7 @@ width: 100%;
 		padding-top: 1.5rem;
 		}
 }
+
 .contact-link-tel {
   font-size: 2.5rem;
 	line-height: calc(40 / 25);
@@ -835,22 +836,24 @@ width: 100%;
 	padding-top: 0.5rem;
 	}
 }
+
+
+
+
 .contact-link-mail {
 	display: block;
 		font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(27 / 18);
 	padding-top: 0.8rem;
-	/* padding-bottom: 2.5rem; */
+	padding-bottom: 2.5rem;
 		@media screen and (max-width:767px) {
 		font-size: 1.6rem;
 		line-height: calc(24 / 16);
 		padding-bottom: 1.5rem;
 		}
 }
-.tel .e-mail a :hover {
- color: #007bff;
-}
+
 
 
 .access-info {
