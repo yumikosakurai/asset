@@ -606,7 +606,6 @@ h3 {
 	line-height: calc(25 / 17);
 	width: 9.2rem;
 	padding-top: 0.2rem;
-
 }
 .news-title {
 	font-size: 2rem;
@@ -739,6 +738,9 @@ h3 {
 	display: block;
 	margin-top: 0.8rem;
 	margin-bottom: 2.5rem;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 1.6rem;
+	}
 }
 .contact-link-mail {
 	font-size: 1.8rem;
@@ -930,7 +932,7 @@ input[type="submit"]:hover {
 .footer .inner {
 	padding-block-start: 6.5rem;
 	@media screen and (max-width: 767px) {
-		padding-block-start: 4.5rem;
+		padding-block-start: 4.8rem;
 	}
 }
 
