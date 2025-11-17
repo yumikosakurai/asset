@@ -474,7 +474,7 @@ h3 {
 	padding-top: 6rem;
 	padding-bottom: 5.9rem;
 	@media screen and (max-width: 767px) {
-		padding-bottom: 3.9rem;
+		padding-bottom: 3.5rem;
 		padding-top: 4.1rem;
 	}
 }
@@ -591,7 +591,7 @@ h3 {
 	height: 100%;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 2.8rem;
-		padding-inline-end: 0.6rem;
+		padding-inline-end: 1rem;
 		padding-block-end: 2.8rem;
 		padding-inline-start: 1rem;
 		display: block;
@@ -600,12 +600,13 @@ h3 {
 }
 
 .news-date {
-	height: 3rem;
+	/* height: 3rem; */
 	align-self: center;
 	font-size: 1.7rem;
 	line-height: calc(25 / 17);
 	width: 9.2rem;
-	padding-top: 0.5rem;
+	padding-top: 0.2rem;
+
 }
 .news-title {
 	font-size: 2rem;
@@ -613,8 +614,6 @@ h3 {
 	color: #0d96a0;
 	width: 16rem;
 	text-align: left;
-	@media screen and (max-width: 767px) {
-	}
 }
 .news-text {
 	font-size: 1.7rem;
@@ -627,7 +626,7 @@ h3 {
 		font-size: 1.6rem;
 		line-height: calc(24 / 16);
 		padding-left: unset;
-		padding-top: 6.5px;
+		padding-top: 7px;
 		margin-left: unset;
 	}
 }
