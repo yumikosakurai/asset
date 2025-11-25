@@ -8,6 +8,8 @@ html {
 	scroll-behavior: smooth;
 	word-break: break-all;
 	font-size: 10px;
+	scroll-behavior: smooth;
+	scroll-padding-top: 50px;
 }
 body {
 	font-family: "Noto Sans JP", "sans-serif", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
@@ -17,6 +19,9 @@ body {
 	font-style: normal;
 	color: #505050;
 	line-height: calc(30 / 17);
+}
+html, body {
+  overflow-x: hidden;
 }
 .pc {
 	@media screen and (max-width: 767px) {
@@ -44,7 +49,7 @@ body {
 	}
 }
 .sp-s {
-	@media screen and (min-width: 351px) {
+	@media screen and (min-width: 360px) {
 		display: none;
 	}
 }
@@ -84,14 +89,19 @@ a:hover {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	max-width: 1080px;
-	padding-inline-start: calc(90px / 1080px * 100vw);
-	padding-inline-end: calc(60px / 1080px * 100vw);
-	margin: 0 auto;
+	max-width: 1000px;
+
+	/* padding-inline-start: calc(90px / 1080px * 100vw);
+	padding-inline-end: calc(60px / 1080px * 100vw); */
+	padding-inline-start: 50px;
+	padding-inline-end: 16px;
+	margin-inline: auto;
 
 	@media screen and (max-width: 767px) {
 		padding-inline-start: unset;
 		padding-left: 1rem;
+		padding-inline-end: unset;
+		padding-right: 1rem;
 	}
 }
 .header .site-title {
@@ -102,8 +112,12 @@ a:hover {
 }
 .site-icon {
 	width: 2.549rem;
+	/* flex-shrink: 0; */
+	height: auto;
+  max-width: none;
+	/* width: auto; */
 	@media screen and (max-width: 767px) {
-		padding-left: 5px;
+		/* padding-left: 5px; */
 	}
 }
 .site-title h1 a {
@@ -149,7 +163,7 @@ a:hover {
 
 /* ここからmain */
 .fv-Content {
-	position: relative;
+	/* position: relative; */
 	width: 100%;
 	height: auto;
 	padding-top: 5rem;
@@ -160,19 +174,19 @@ a:hover {
 
 .fv-wrap {
 	width: 100%;
-	position: relative;
+	/* margin-left: calc(50% - 50vw); */
 	overflow: hidden;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+	position: relative;
+	/* overflow: hidden; */
 	@media screen and (max-width: 767px) {
 		max-width: 767px;
 	}
 }
-.fv__image img {
+/* .fv__image img {
 	object-fit: cover;
-}
+	overflow: hidden;
+
+} */
 .fv__contents {
 	width: 100%;
 	height: 100%;
@@ -216,7 +230,7 @@ a:hover {
 }
 
 .fv-catch-text {
-	padding-top: 10px;
+	margin-top: 10px;
 }
 
 .fv-catch-text span {
@@ -231,17 +245,13 @@ a:hover {
 }
 
 /* ここからご挨拶 */
-#greeting {
-	margin-top: -5rem;
-	padding-top: 11rem;
-	@media screen and (max-width: 767px) {
-		padding-top: 10rem;
-	}
-}
 .greeting {
-	padding-bottom: 2.3rem;
+	padding-block-start: 6rem;
+	padding-block-end: 2.3rem;
 	@media screen and (max-width: 767px) {
-		padding-bottom: unset;
+		padding-block-end: 3.9rem;
+		padding-block-start: 5rem;
+		scroll-padding-block-start: 5rem;
 	}
 }
 .gr__text {
@@ -268,8 +278,8 @@ a:hover {
 	line-height: calc(33 / 18);
 	text-align: center; /* 各行の中央をそろえる */
 	margin: 0 auto;
-	padding-top: 1.4rem;
-	padding-bottom: 3.9rem;
+	margin-block-start: 1.4rem;
+	margin-block-end: 3.9rem;
 }
 .gr-catch {
 	@media screen and (max-width: 885px) {
@@ -279,12 +289,15 @@ a:hover {
 		text-align: left;
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
-		padding-top: 1.6rem;
+		padding-block-start: 1.6rem;
+		margin-block-start: unset;
+		margin-block-end: unset;
+
 	}
 }
 .gr-catch p {
 	margin: 0;
-	margin-bottom: 0;
+	margin-block-end: 0;
 	@media screen and (max-width: 885px) {
 	}
 }
@@ -297,23 +310,15 @@ a:hover {
 		bottom: 10%;
 	}
 }
-.site-icon-thin {
-	width: 8.375rem;
-	height: 7.712rem;
-}
-
 /* ここから強み */
-#strengths {
-	margin-top: -5rem;
-	padding-top: 5rem;
-}
 .strengths {
 	background-color: rgba(13, 150, 160, 0.102);
-	padding-top: 6rem;
-	padding-bottom: 6.8rem;
+	padding-block-start: 6rem;
+	padding-block-end: 6.8rem;
+	width: 100%;
 	@media screen and (max-width: 767px) {
-		padding-top: 5.1rem;
-		padding-bottom: 3.2rem;
+		padding-block-start: 5.1rem;
+		padding-block-end: 3.2rem;
 	}
 }
 .title-wrap {
@@ -336,9 +341,9 @@ a:hover {
 	display: block;
 }
 .strengths-items {
-	margin-top: 4.5rem;
+	margin-block-start: 4.5rem;
 	@media screen and (max-width: 767px) {
-		margin-top: unset;
+		margin-block-start: 3.5rem;
 	}
 }
 
@@ -350,6 +355,7 @@ a:hover {
 	max-width: 880px;
 	margin: 0 auto;
 	@media screen and (max-width: 767px) {
+/* margin-top: 3.5rem; */
 		flex-direction: column-reverse;
 		max-width: 767px;
 		width: 100%;
@@ -367,7 +373,7 @@ h3 {
 		justify-content: center;
 		font-size: 2rem;
 		line-height: calc(30 / 20);
-		white-space: nowrap;
+		/* white-space: nowrap; */
 		text-align: center;
 	}
 }
@@ -375,36 +381,36 @@ h3 {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: calc(33 / 18);
-	margin-top: 1.9rem;
+	margin-block-start: 1.9rem;
 	@media screen and (max-width: 767px) {
 		text-align: left;
 		font-size: 1.6rem;
 		font-weight: 500;
 		line-height: calc(30 / 16);
-		margin-top: 0.8rem;
+		margin-block-start: 0.8rem;
 	}
 }
 .strengths-item-fir {
 	column-gap: 4.5rem;
 	@media screen and (max-width: 767px) {
-		margin-top: 3.5rem;
+		/* margin-top: 3.5rem; */
 		row-gap: 3rem;
 		column-gap: unset;
 	}
 }
 .strengths-item-fir h3 p {
-	padding-top: 5px;
+	padding-block-start: 5px;
 }
 
 .strengths-item-re {
 	flex-direction: row-reverse;
-	margin-top: 5rem;
+	margin-block-start: 5rem;
 	column-gap: 4.4rem;
 
 	@media screen and (max-width: 767px) {
 		max-width: 767px;
 		flex-direction: column-reverse;
-		margin-top: 4rem;
+		margin-block-start: 4rem;
 		width: 100%;
 	}
 }
@@ -415,9 +421,9 @@ h3 {
 }
 .strengths-item-se {
 	column-gap: 4.3rem;
-	margin-top: 5rem;
+	margin-block-start: 5rem;
 	@media screen and (max-width: 767px) {
-		margin-top: 3.7rem;
+		margin-block-start: 3.7rem;
 	}
 }
 
@@ -466,29 +472,25 @@ h3 {
 }
 
 /* ここからサービス */
-#service {
-	margin-top: -5rem;
-	padding-top: 5rem;
-}
 .service {
-	padding-top: 6rem;
-	padding-bottom: 5.9rem;
+	padding-block-start: 6rem;
+	padding-block-end: 5.9rem;
 	@media screen and (max-width: 767px) {
-		padding-bottom: 3.5rem;
-		padding-top: 4.1rem;
+		padding-block-end: 3.5rem;
+		padding-block-start: 4.1rem;
 	}
 }
 .grid {
 	display: grid;
 	gap: 5rem;
-	margin-top: 4.5rem;
+	/* margin-block-start: 4.5rem; */
 	grid-template-columns: repeat(3, 1fr);
 	text-align: center;
 	align-items: stretch;
 
 	@media screen and (max-width: 767px) {
 		display: block;
-		margin-top: 4rem;
+		/* margin-block-start: 4rem; */
 	}
 }
 
@@ -496,16 +498,18 @@ h3 {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	margin-top: 4.5rem;
+
 	@media screen and (max-width: 767px) {
 		margin-top: 4rem;
 	}
 }
 
 .service-text {
-	margin-top: 1.9rem;
+	margin-block-start: 1.9rem;
 	flex-grow: 1;
 	@media screen and (max-width: 767px) {
-		margin-top: 3rem;
+		margin-block-start: 3rem;
 	}
 }
 .service-text h3 {
@@ -519,7 +523,7 @@ h3 {
 .service-text p {
 	font-size: 1.7rem;
 	font-weight: 500;
-	margin-top: 0.8rem;
+	margin-block-start: 0.8rem;
 	text-align: left;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
@@ -528,23 +532,17 @@ h3 {
 }
 
 /* ここからお知らせ */
-#news {
-	margin-top: -5rem;
-	padding-top: 5rem;
-}
 .news {
-	padding-top: 6rem;
-	padding-bottom: 7rem;
+	padding-block-start: 6rem;
+	padding-block-end: 7rem;
 	background-color: rgba(13, 150, 160, 0.102);
 	@media screen and (max-width: 767px) {
-		padding-top: 3.9rem;
-		padding-bottom: 5rem;
+		padding-block-start: 3.9rem;
+		padding-block-end: 5rem;
 	}
 }
 .border-texts {
-	margin-top: 4rem;
-	@media screen and (max-width: 767px) {
-	}
+	margin-block-start: 4rem;
 }
 
 .news-items {
@@ -573,9 +571,6 @@ h3 {
 .news-items li:last-child {
 	border-bottom: 1px solid #000; /* 最後の線 */
 }
-.news-item a:hover {
-	opacity: 0.5;
-}
 
 .news-link {
 	display: flex;
@@ -588,7 +583,10 @@ h3 {
 	text-align: center;
 	justify-content: center;
 	padding-inline-start: 2rem;
+	padding-inline-end: 2rem;
 	height: 100%;
+	padding-block-start: 17px;
+	padding-block-end: 17px;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 2.8rem;
 		padding-inline-end: 1rem;
@@ -605,7 +603,10 @@ h3 {
 	font-size: 1.7rem;
 	line-height: calc(25 / 17);
 	width: 9.2rem;
-	padding-top: 0.2rem;
+	padding-block-start: 0.2rem;
+		@media screen and (max-width: 767px) {
+			margin-block-start: 2px;
+		}
 }
 .news-title {
 	font-size: 2rem;
@@ -613,6 +614,10 @@ h3 {
 	color: #0d96a0;
 	width: 16rem;
 	text-align: left;
+		@media screen and (max-width: 767px) {
+			margin-top: 1px;
+		}
+
 }
 .news-text {
 	font-size: 1.7rem;
@@ -620,34 +625,33 @@ h3 {
 	flex: 1;
 	column-gap: 24px;
 	text-align: left;
-	margin-left: 25px;
+	margin-inline-start: 25px;
+	line-height: 1.2;
+
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(24 / 16);
 		padding-left: unset;
-		padding-top: 7px;
+		margin-top: 7px;
 		margin-left: unset;
 	}
 }
 /* ここからアクセス */
-#access {
-	margin-top: -5rem;
-	padding-top: 5rem;
-}
+
 .access {
-	padding-top: 6rem;
-	padding-bottom: 7rem;
+	padding-block-start: 6rem;
+	padding-block-end: 7rem;
 	width: 100%;
 	@media screen and (max-width: 767px) {
-		padding-top: 4.1rem;
-		padding-bottom: 5rem;
+		padding-block-start: 4.1rem;
+		padding-block-end: 5rem;
 	}
 }
 .contact-info {
 	display: flex;
 	align-items: stretch; /* 高さを揃える！ */
 	column-gap: 4.6rem;
-	margin-top: 4.4rem;
+	margin-block-start: 4.4rem;
 	@media screen and (max-width: 767px) {
 		display: block;
 		row-gap: 3rem;
@@ -684,8 +688,8 @@ h3 {
 	border-bottom: 1px solid #707070;
 	width: 100%;
 	@media screen and (max-width: 767px) {
-		margin-top: 3rem;
-		padding-bottom: 0rem;
+		margin-block-start: 2.5rem;
+		padding-block-end: 0rem;
 	}
 }
 .name {
@@ -696,11 +700,11 @@ h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(27 / 18);
-	margin-top: 1.5rem;
+	margin-block-start: 1.5rem;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(24 / 16);
-		margin-top: 1.2rem;
+		margin-block-start: 1.2rem;
 	}
 }
 
@@ -712,11 +716,11 @@ h3 {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: calc(27 / 18);
-	margin-top: 2rem;
+	margin-block-start: 2rem;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(27 / 16);
-		margin-top: 1.5rem;
+		margin-block-start: 1.5rem;
 	}
 }
 
@@ -724,23 +728,35 @@ h3 {
 	font-size: 2.5rem;
 	line-height: calc(40 / 25);
 	color: #0d96a0;
-	margin-top: 1.4rem;
+	margin-block-start: 1.4rem;
 	@media screen and (min-width: 768px) {
 		pointer-events: none;
 		cursor: pointer;
 	}
 	@media screen and (max-width: 767px) {
-		margin-top: 3px;
+		margin-block-start: 3px;
 	}
 }
 
-.mail {
-	display: block;
-	margin-top: 0.8rem;
-	margin-bottom: 2.5rem;
+.e-mail {
+	display: flex;
+	align-items: flex-start;
+	margin-block-start: 0.8rem;
+	margin-block-end: 2.5rem;
 	@media screen and (max-width: 767px) {
-		margin-bottom: 1.6rem;
+		margin-block-end: 1.6rem;
 	}
+}
+.mail {
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: calc(27 / 18);
+	@media screen and (max-width: 767px) {
+		font-size: 1.6rem;
+		line-height: calc(24 / 16);
+	}
+
+
 }
 .contact-link-mail {
 	font-size: 1.8rem;
@@ -751,68 +767,59 @@ h3 {
 		line-height: calc(24 / 16);
 	}
 }
-.contact-link-mail a:hover {
-	opacity: 0.8;
-}
 
 .access-info {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(40 / 18);
-	padding-top: 1.4rem;
-	padding-bottom: 1.3rem;
+	padding-block-start: 1.4rem;
+	padding-block-end: 1.3rem;
 	border-bottom: 1px solid #707070;
-	padding-left: 0.5rem;
+	padding-inline-start: 0.5rem;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
-		padding-left: unset;
-		padding-top: 1.3rem;
-		padding-bottom: 1rem;
+		padding-inline-start: unset;
+		padding-block-start: 1.3rem;
+		padding-block-end: 1rem;
 	}
 }
 
 /* ここからお問い合わせ */
-#contact {
-	margin-top: -5rem;
-	padding-top: 5rem;
-}
-
 .contact {
 	background-color: rgba(13, 150, 160, 0.102);
-	padding-bottom: 8rem;
-	padding-top: 6rem;
+	padding-block-end: 8rem;
+	padding-block-start: 6rem;
 	@media screen and (max-width: 767px) {
-		padding-top: 4.1rem;
-		padding-bottom: 5rem;
+		padding-block-start: 4rem;
+		padding-block-end: 5rem;
 	}
 }
 
 .contact-text {
 	text-align: center; /* 各行の中央をそろえる */
 	margin: 0 auto;
-	margin-bottom: 3.9rem;
+	margin-block-end: 3.9rem;
 	@media screen and (max-width: 767px) {
-		margin-bottom: 3rem;
+		margin-block-end: 3rem;
+		margin-block-start: 4rem;
 	}
 }
 .contact-text p {
 	font-size: 1.7rem;
 	font-weight: 500;
-	padding-top: 2rem;
+	padding-block-start: 2rem;
 	margin: 0;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
 		text-align: left;
-		padding-top: 4rem;
+		padding-block-start: unset;
 	}
 }
 .form {
 	max-width: 880px;
 	margin-inline: auto;
-	@media screen and (max-width: 767px) {
-	}
 }
 .form__item {
 	display: flex;
@@ -824,10 +831,10 @@ h3 {
 }
 
 .form__item:not(:first-of-type) {
-	margin-top: 3rem;
+	margin-block-start: 3rem;
 
 	@media screen and (max-width: 767px) {
-		margin-top: 1.5rem;
+		margin-block-start: 1.5rem;
 	}
 }
 
@@ -837,18 +844,18 @@ h3 {
 	align-items: center;
 	line-height: calc(33 / 20);
 	width: 14rem;
-	padding-top: 0.5rem;
+	padding-block-start: 0.5rem;
 
 	@media screen and (max-width: 767px) {
 		width: 100%;
 		font-size: 1.8rem;
 		line-height: calc(33 / 18);
-		padding-top: 0.4rem;
+		padding-block-start: 0.4rem;
 	}
 }
 .form__la {
 	align-items: unset;
-	padding-top: 0.5rem;
+	padding-block-start: 0.5rem;
 }
 .form__input {
 	flex: 1;
@@ -859,7 +866,7 @@ h3 {
 	flex: 1;
 	line-height: 0;
 	font-weight: normal;
-	padding-top: 3px;
+	padding-block-start: 3px;
 }
 
 input[type="text"],
@@ -886,12 +893,12 @@ textarea {
 }
 
 .contact__button {
-	margin-top: 4.8rem;
+	margin-block-start: 4.8rem;
 	margin-inline: auto;
 	width: 200px;
 	@media screen and (max-width: 767px) {
 		width: 33.5rem;
-		margin-top: 4.7rem;
+		margin-block-start: 4.7rem;
 	}
 	@media screen and (max-width: 370px) {
 		width: 100%;
@@ -906,7 +913,6 @@ input[type="submit"] {
 	font-size: 2.5rem;
 	cursor: pointer;
 	transition: 0.4s;
-	padding-top: 1px;
 	text-align: center; /* 横方向の中央揃え */
 	line-height: calc(33 / 25);
 	border: 1px solid transparent;
@@ -926,11 +932,11 @@ input[type="submit"]:hover {
 /* ここからフッター */
 .footer {
 	width: 100%;
-	height: 28rem;
 	background-color: #505050;
 }
 .footer .inner {
 	padding-block-start: 6.5rem;
+	padding-block-end: 7rem;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 4.8rem;
 	}
@@ -947,14 +953,14 @@ input[type="submit"]:hover {
 	font-size: 2rem;
 	line-height: calc(33 / 20);
 	border-bottom: 1px solid #fff;
-	padding-bottom: 2rem;
+	padding-block-end: 2rem;
 	max-width: 737px;
 	width: 100%;
 	margin: 0 auto;
 	display: block;
 	@media screen and (max-width: 767px) {
 		font-size: 1.8rem;
-		padding-bottom: 2.5rem;
+		padding-block-end: 2.5rem;
 	}
 }
 
@@ -978,6 +984,11 @@ input[type="submit"]:hover {
 .footer__nav li a {
 	padding: 0.2rem 0.5rem;
 }
+.footer__nav a {
+	transition: opacity 0.3s ease; /* 変化にアニメーションを付ける */
+	cursor: pointer; /* マウスオーバーで手の形に */
+}
+
 /* .footer__nav li a:hover {
 	opacity: 0.8;
 }
@@ -991,13 +1002,14 @@ input[type="submit"]:hover {
 	font-size: 2rem;
 	line-height: calc(33 / 20);
 	color: #fff;
-	padding-top: 2.6rem;
+	padding-block-start: 2.6rem;
 	column-gap: 2rem;
 	justify-content: center;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(33 / 16);
-		padding-top: 1.5rem;
+		padding-block-start: unset;
+		margin-block-start: 1.5rem;
 		column-gap: 1.8rem;
 		@media screen and (max-width: 350px) {
 			font-size: 1.4rem;
@@ -1009,11 +1021,11 @@ input[type="submit"]:hover {
 	align-items: center;
 	justify-content: center;
 	column-gap: 12px;
-	margin-top: 0.9rem;
+	margin-block-start: 0.9rem;
 
 	@media screen and (max-width: 767px) {
 		justify-content: center;
-		margin-top: 2.8rem;
+		margin-block-start: 2.8rem;
 	}
 }
 
