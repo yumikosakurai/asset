@@ -193,6 +193,8 @@ a:hover {
 	background-color: rgba(255, 255, 255, 0.72);
 	padding-left: calc(99 / 1080 * 100vw);
 	align-items: center;
+		padding-top: calc(23 / 1080 * 100vw);
+
 	@media screen and (max-width: 767px) {
 		width: calc(311 / 375 * 100vw);
 		height: calc(148 / 375 * 100vw);
@@ -204,7 +206,6 @@ a:hover {
 .fv-catch p {
 	font-size: calc(25 / 1080 * 100vw);
 	line-height: calc(36.2 / 25);
-	padding-top: calc(23 / 1080 * 100vw);
 	white-space: nowrap;
 	color: #505050;
 
@@ -289,11 +290,13 @@ a:hover {
 }
 .icon-t {
 	position: absolute;
-	right: -25px;
-	bottom: 9px;
+	right: -3%;
+	bottom: -16%;
 	@media screen and (max-width: 767px) {
-		right: 2%;
-		bottom: 10%;
+		right: 3%;
+		bottom: 3%;
+		width: 68.35px;
+		height: 62.94px;
 	}
 }
 /* ここから強み */
@@ -622,7 +625,7 @@ h3 {
 	padding-block-end: 7rem;
 	width: 100%;
 	@media screen and (max-width: 767px) {
-		padding-block-start: 4.1rem;
+		padding-block-start: 3.7rem;
 		padding-block-end: 5rem;
 	}
 }
@@ -667,7 +670,7 @@ h3 {
 	border-bottom: 1px solid #707070;
 	width: 100%;
 	@media screen and (max-width: 767px) {
-		margin-block-start: 2.5rem;
+		margin-block-start: 3rem;
 		padding-block-end: 0rem;
 	}
 }
@@ -690,16 +693,20 @@ h3 {
 .tel-link {
 	display: flex;
 	align-items: flex-start;
+	margin-block-start: 1rem;
+	@media screen and (max-width: 767px) {
+		margin-block-start: unset;
+	}
 }
 .tel {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: calc(27 / 18);
-	margin-block-start: 2rem;
+	padding-block-start: 1rem;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(27 / 16);
-		margin-block-start: 1.5rem;
+		padding-block-start: 1.2rem;
 	}
 }
 
@@ -707,7 +714,7 @@ h3 {
 	font-size: 2.5rem;
 	line-height: calc(40 / 25);
 	color: #0d96a0;
-	margin-block-start: 1.4rem;
+	/* margin-block-start: 1.4rem; */
 	@media screen and (min-width: 768px) {
 		pointer-events: none;
 		cursor: pointer;
@@ -739,6 +746,7 @@ h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(27 / 18);
+	padding-inline-end: 10px;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(24 / 16);
@@ -766,7 +774,7 @@ h3 {
 .contact {
 	background-color: rgba(13, 150, 160, 0.102);
 	padding-block-end: 8rem;
-	padding-block-start: 6rem;
+	padding-block-start: 6.5rem;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 4rem;
 		padding-block-end: 5rem;
@@ -776,6 +784,7 @@ h3 {
 .contact-text {
 	text-align: center; /* 各行の中央をそろえる */
 	margin: 0 auto;
+	margin-block-start: 2.3rem;
 	margin-block-end: 3.9rem;
 	@media screen and (max-width: 767px) {
 		margin-block-end: 3rem;
@@ -785,7 +794,7 @@ h3 {
 .contact-text p {
 	font-size: 1.7rem;
 	font-weight: 500;
-	padding-block-start: 2rem;
+	/* padding-block-start: 2rem; */
 	margin: 0;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
@@ -801,9 +810,11 @@ h3 {
 .form__item {
 	display: flex;
 	column-gap: 3rem;
+	margin-block-end: 30px;
 
 	@media screen and (max-width: 767px) {
 		display: block;
+		margin-block-end: 1.5rem;
 	}
 }
 
@@ -870,10 +881,9 @@ textarea {
 }
 
 .contact__button {
-	margin-block-start: 4.8rem;
+	margin-block-start: 4.5rem;
 	margin-inline: auto;
 	width: 200px;
-	display: flex;
 
 	@media screen and (max-width: 767px) {
 		width: 33.5rem;
@@ -881,6 +891,7 @@ textarea {
 	}
 	@media screen and (max-width: 370px) {
 		width: 100%;
+		margin-block-start: 5rem;
 	}
 }
 input[type="submit"] {
@@ -895,13 +906,17 @@ input[type="submit"] {
 	text-align: center; 
 	line-height: calc(33 / 25);
 	border: 1px solid transparent;
-	padding-block-start: 3px;
-	padding-block-end: 5px;
+	/* padding-block-start: 3px;
+	padding-block-end: 5px; */
+	display: flex;
 
 	@media screen and (max-width: 767px) {
 		font-size: 2rem;
 		line-height: calc(26 / 20);
 		height: 41px;
+			padding-block-start: unset;
+	padding-block-end: unset;
+
 	}
 }
 input[type="submit"]:hover {
@@ -941,7 +956,7 @@ input[type="submit"]:hover {
 	display: block;
 	@media screen and (max-width: 767px) {
 		font-size: 1.8rem;
-		padding-block-end: 2.5rem;
+		padding-block-end: 2.3rem;
 	}
 }
 
@@ -978,7 +993,8 @@ input[type="submit"]:hover {
 	font-size: 2rem;
 	line-height: calc(33 / 20);
 	color: #fff;
-	padding-block-start: 2.6rem;
+	/* padding-block-start: 2.6rem; */
+	margin-block-start: 2.6rem;
 	column-gap: 2rem;
 	justify-content: center;
 	@media screen and (max-width: 767px) {
