@@ -199,7 +199,7 @@ a:hover {
 		width: calc(311 / 375 * 100vw);
 		height: calc(148 / 375 * 100vw);
 		padding-left: calc(20 / 375 * 100vw);
-		padding-top: calc(10 / 375 * 100vw);
+		padding-top: calc(15 / 375 * 100vw);
 	}
 }
 
@@ -307,7 +307,7 @@ a:hover {
 	width: 100%;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 5.1rem;
-		padding-block-end: 3.2rem;
+		padding-block-end: 3.5rem;
 	}
 }
 .title-wrap {
@@ -317,7 +317,7 @@ a:hover {
 	gap: 2rem;
 
 	@media screen and (max-width: 767px) {
-		padding-top: unset;
+		padding-block-start: unset;
 	}
 }
 .title {
@@ -374,7 +374,7 @@ h3 {
 		font-size: 1.6rem;
 		font-weight: 500;
 		line-height: calc(30 / 16);
-		margin-block-start: 0.8rem;
+		margin-block-start: 0.6rem;
 	}
 }
 .strengths-item-fir {
@@ -472,9 +472,11 @@ h3 {
 	grid-template-columns: repeat(3, 1fr);
 	text-align: center;
 	align-items: stretch;
+	margin-block-start: 4.7rem;
 
 	@media screen and (max-width: 767px) {
 		display: block;
+		margin-block-start: 4.2rem;
 	}
 }
 
@@ -482,11 +484,6 @@ h3 {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	margin-top: 4.5rem;
-
-	@media screen and (max-width: 767px) {
-		margin-top: 4rem;
-	}
 }
 
 .service-text {
@@ -514,6 +511,17 @@ h3 {
 		line-height: calc(30 / 16);
 	}
 }
+ .service-item-hotel {
+	@media screen and (max-width: 767px) {
+		margin-block-start: 4rem;
+	}
+}
+.service-item-trmim {
+	@media screen and (max-width: 767px) {
+		margin-block-start: 4rem;
+	}
+} 
+
 
 /* ここからお知らせ */
 .news {
@@ -521,7 +529,7 @@ h3 {
 	padding-block-end: 7rem;
 	background-color: rgba(13, 150, 160, 0.102);
 	@media screen and (max-width: 767px) {
-		padding-block-start: 3.9rem;
+		padding-block-start: 4rem;
 		padding-block-end: 5rem;
 	}
 }
@@ -581,15 +589,11 @@ h3 {
 }
 
 .news-date {
-	/* height: 3rem; */
 	align-self: center;
 	font-size: 1.7rem;
 	line-height: calc(25 / 17);
 	width: 9.2rem;
-	padding-block-start: 0.2rem;
-	@media screen and (max-width: 767px) {
-		margin-block-start: 2px;
-	}
+	margin-block-start: 0.2rem;
 }
 .news-title {
 	font-size: 2rem;
@@ -714,7 +718,6 @@ h3 {
 	font-size: 2.5rem;
 	line-height: calc(40 / 25);
 	color: #0d96a0;
-	/* margin-block-start: 1.4rem; */
 	@media screen and (min-width: 768px) {
 		pointer-events: none;
 		cursor: pointer;
@@ -728,7 +731,7 @@ h3 {
 	display: flex;
 	align-items: flex-start;
 	margin-block-start: 0.8rem;
-	margin-block-end: 2.5rem;
+	margin-block-end: 2.6rem;
 	@media screen and (max-width: 767px) {
 		margin-block-end: 1.6rem;
 	}
@@ -757,16 +760,23 @@ h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(40 / 18);
-	padding-block-start: 1.4rem;
-	padding-block-end: 1.3rem;
+	margin-block-start: 1.4rem;
 	border-bottom: 1px solid #707070;
 	padding-inline-start: 0.5rem;
+
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
 		padding-inline-start: unset;
-		padding-block-start: 1.3rem;
+		margin-block-start: 1.3rem;
+
+	}
+}
+.access-close {
+	padding-block-end: 1.5rem;
+	@media screen and (max-width: 767px) {
 		padding-block-end: 1rem;
+
 	}
 }
 
@@ -774,7 +784,7 @@ h3 {
 .contact {
 	background-color: rgba(13, 150, 160, 0.102);
 	padding-block-end: 8rem;
-	padding-block-start: 6.5rem;
+	padding-block-start: 6rem;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 4rem;
 		padding-block-end: 5rem;
@@ -784,7 +794,7 @@ h3 {
 .contact-text {
 	text-align: center; /* 各行の中央をそろえる */
 	margin: 0 auto;
-	margin-block-start: 2.3rem;
+	margin-block-start: 2rem;
 	margin-block-end: 3.9rem;
 	@media screen and (max-width: 767px) {
 		margin-block-end: 3rem;
@@ -794,7 +804,6 @@ h3 {
 .contact-text p {
 	font-size: 1.7rem;
 	font-weight: 500;
-	/* padding-block-start: 2rem; */
 	margin: 0;
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
@@ -807,14 +816,19 @@ h3 {
 	max-width: 880px;
 	margin-inline: auto;
 }
+.form .form__items ul li {
+		margin-block-end: 30px;
+	@media screen and (max-width: 767px) {
+		margin-block-end: 1.5rem;
+	}
+
+
+}
 .form__item {
 	display: flex;
 	column-gap: 3rem;
-	margin-block-end: 30px;
-
 	@media screen and (max-width: 767px) {
 		display: block;
-		margin-block-end: 1.5rem;
 	}
 }
 
@@ -881,7 +895,7 @@ textarea {
 }
 
 .contact__button {
-	margin-block-start: 4.5rem;
+	margin-block-start: 4.6rem;
 	margin-inline: auto;
 	width: 200px;
 
@@ -906,8 +920,6 @@ input[type="submit"] {
 	text-align: center; 
 	line-height: calc(33 / 25);
 	border: 1px solid transparent;
-	/* padding-block-start: 3px;
-	padding-block-end: 5px; */
 	display: flex;
 
 	@media screen and (max-width: 767px) {
@@ -931,7 +943,7 @@ input[type="submit"]:hover {
 	background-color: #505050;
 }
 .footer .inner {
-	padding-block-start: 6.5rem;
+	padding-block-start: 6.7rem;
 	padding-block-end: 7rem;
 	@media screen and (max-width: 767px) {
 		padding-block-start: 4.8rem;
@@ -993,7 +1005,6 @@ input[type="submit"]:hover {
 	font-size: 2rem;
 	line-height: calc(33 / 20);
 	color: #fff;
-	/* padding-block-start: 2.6rem; */
 	margin-block-start: 2.6rem;
 	column-gap: 2rem;
 	justify-content: center;
