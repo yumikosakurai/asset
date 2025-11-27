@@ -761,7 +761,7 @@ h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(40 / 18);
-	margin-block-start: 1.4rem;
+	padding-block-start: 1.4rem;
 	border-bottom: 1px solid #707070;
 	padding-inline-start: 0.5rem;
 	padding-block-end: 1.5rem;
@@ -770,7 +770,7 @@ h3 {
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
 		padding-inline-start: unset;
-		margin-block-start: 1.3rem;
+		padding-block-start: 1.3rem;
 		padding-block-end: 1rem;
 	}
 }
