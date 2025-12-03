@@ -90,14 +90,16 @@ a:hover {
 	align-items: center;
 	width: 100%;
 	max-width: 1000px;
-	padding-inline-start: 50px;
-	padding-inline-end: 16px;
+	/* padding-inline-start: 50px; 
+	 padding-inline-end: 16px; */
+	padding-inline-start: 30px;
+	padding-inline-end: 30px;
 	margin-inline: auto;
-	@media screen and (max-width: 1000px) {
+	/* @media screen and (max-width: 1000px) {
 		padding-inline-start: 30px;
 		padding-inline-end: 30px;
 
-	}
+	} */
 	@media screen and (max-width: 767px) {
 		padding-inline-start: unset;
 		padding-left: 1rem;
@@ -247,9 +249,9 @@ margin-top: 5rem;
 /* ここからご挨拶 */
 .greeting {
 	padding-block-start: 6rem;
-	padding-block-end: 2.3rem;
+	padding-block-end: 6.2rem;
 	@media screen and (max-width: 767px) {
-		padding-block-end: unset;
+		padding-block-end: 3.9rem;
 		padding-block-start: 5rem;
 		scroll-padding-block-start: 5rem;
 	}
@@ -279,7 +281,6 @@ margin-top: 5rem;
 	text-align: center; /* 各行の中央をそろえる */
 	margin: 0 auto;
 	margin-block-start: 1.4rem;
-	padding-block-end: 3.9rem;
 }
 .gr-catch {
 	@media screen and (max-width: 885px) {
@@ -290,7 +291,6 @@ margin-top: 5rem;
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
 		margin-block-start: 1.6rem;
-		margin-block-end: unset;
 	}
 }
 .gr-catch p {
@@ -302,10 +302,10 @@ margin-top: 5rem;
 .icon-t {
 	position: absolute;
 	right: -3%;
-	bottom: 5%;
+	bottom: -17%;
 	@media screen and (max-width: 767px) {
 		right: 3%;
-		bottom: 14%;
+		bottom: 3%;
 		width: 68.35px;
 		height: 62.94px;
 	}
@@ -325,7 +325,6 @@ margin-top: 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* gap: 2rem; */
 
 	@media screen and (max-width: 767px) {
 		padding-block-start: unset;
@@ -540,7 +539,7 @@ h3 {
 }
 
 .news-items {
-	width: 100%; /* 任意の幅（例：80%） */
+	width: 100%; 
 	margin: 0 auto;
 }
 .news-item {
@@ -601,6 +600,11 @@ h3 {
 		margin-top: 1px;
 	}
 }
+/* .news-item-anniv .news-text {
+		@media screen and (max-width: 767px) {
+	white-space: nowrap;
+}
+} */
 .news-text {
 	font-size: 1.7rem;
 	font-weight: 500;
@@ -672,8 +676,10 @@ h3 {
 .access-item {
 	border-bottom: 1px solid #707070;
 	width: 100%;
+	padding-block-end: 2.6rem;
+
 	@media screen and (max-width: 767px) {
-		padding-block-end: 0rem;
+		padding-block-end: 1.5rem;
 	}
 }
 .name {
@@ -694,8 +700,9 @@ h3 {
 
 .tel-link {
 	display: flex;
-	align-items: flex-start;
+	/* align-items: flex-start; */
 	margin-block-start: 1rem;
+	/* align-items: end; */
 	align-items: center;
 	@media screen and (max-width: 767px) {
 		margin-block-start: 5px;
@@ -705,7 +712,7 @@ h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(27 / 18);
-	padding-block-start: 1rem;
+	/* padding-block-start: 1rem; */
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(27 / 16);
@@ -727,11 +734,11 @@ h3 {
 	display: flex;
 	align-items: flex-start;
 	margin-block-start: 0.8rem;
-	padding-block-end: 2.6rem;
-	@media screen and (max-width: 767px) {
+	/* padding-block-end: 2.6rem; */
+	/* @media screen and (max-width: 767px) {
 		margin-block-end: 1.5rem;
 		padding-block-end: unset;
-	}
+	} */
 }
 .mail {
 	font-size: 1.8rem;
