@@ -90,17 +90,12 @@ a:hover {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	max-width: 1000px;
+	max-width: 1080px;
 	/* padding-inline-start: 50px; 
 	 padding-inline-end: 16px; */
 	padding-inline-start: 30px;
 	padding-inline-end: 30px;
 	margin-inline: auto;
-	/* @media screen and (max-width: 1000px) {
-		padding-inline-start: 30px;
-		padding-inline-end: 30px;
-
-	} */
 	@media screen and (max-width: 767px) {
 		padding-inline-start: unset;
 		padding-left: 1rem;
