@@ -100,7 +100,7 @@ a:hover {
 	}
 	@media screen and (max-width: 767px) {
 		padding-inline-start: unset;
-		padding-left: 1rem;
+		padding-left: 2rem;
 		padding-inline-end: unset;
 		padding-right: 1rem;
 	}
