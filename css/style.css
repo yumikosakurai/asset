@@ -16,7 +16,7 @@ body {
 	font-family: "Noto Sans JP", "sans-serif", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
 		"Yu Gothic", "Meiryo", "sans-serif";
 	font-optical-sizing: auto;
-	font-weight: bold;
+	font-weight: 700;
 	font-style: normal;
 	color: #505050;
 	line-height: calc(30 / 17);
@@ -117,12 +117,9 @@ a:hover {
 	max-width: none;
 }
 .site-icon {
-	width: 2.549rem;
-	height: auto;
-	max-width: none;
-	display: flex;
-	gap: 20px;
-	justify-content: center;
+	width: 25.49px;
+	/* height: auto;
+	max-width: none; */
 }
 .site-title h1 a {
 	height: 5rem;
@@ -323,6 +320,7 @@ margin-top: 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	column-gap: 20px;
 
 	@media screen and (max-width: 767px) {
 		padding-block-start: unset;
@@ -387,7 +385,7 @@ h3 {
 	}
 }
 .strengths-item-fir {
-	column-gap: 4.5rem;
+	column-gap: min(calc(45 / 1080 * 100vw), 45px);
 	@media screen and (max-width: 767px) {
 		row-gap: 3rem;
 		column-gap: unset;
@@ -428,7 +426,8 @@ h3 {
 	}
 }
 .strengths-text {
-	width: 46.5%;
+
+	flex: 1;
 
 	@media screen and (max-width: 767px) {
 		text-align: center; /* 各行の中央をそろえる */
@@ -477,7 +476,9 @@ h3 {
 }
 .grid {
 	display: grid;
-	gap: 5rem;
+	/* gap: 5rem; */
+	column-gap: min(calc(50 / 1080 * 100vw), 50px);
+
 	grid-template-columns: repeat(3, 1fr);
 	text-align: center;
 	align-items: stretch;
@@ -592,7 +593,7 @@ h3 {
 	font-size: 2rem;
 	line-height: calc(25 / 20);
 	color: #0d96a0;
-	width: 16rem;
+	width: 185px;
 	text-align: left;
 	@media screen and (max-width: 767px) {
 		margin-top: 1px;
@@ -609,7 +610,7 @@ h3 {
 	flex: 1;
 	column-gap: 24px;
 	text-align: left;
-	margin-inline-start: 25px;
+	/* margin-inline-start: 25px; */
 	line-height: calc(30 / 17);
 
 
@@ -751,6 +752,9 @@ h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: calc(27 / 18);
+	transition: opacity 0.3s ease; /* 変化にアニメーションを付ける */
+	cursor: pointer; /* マウスオーバーで手の形に */
+
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(24 / 16);
@@ -914,7 +918,7 @@ input[type="submit"] {
 	border-radius: 10px;
 	font-size: 2.5rem;
 	cursor: pointer;
-	transition: 0.4s;
+	transition: 0.4s ease;
 	text-align: center; 
 	line-height: calc(33 / 25);
 	border: 1px solid transparent;
