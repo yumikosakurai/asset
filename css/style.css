@@ -128,16 +128,12 @@ a:hover {
 
 .site-icon {
 	width: 25.49px;
-	/* height: auto;
-	max-width: none; */
 }
 
 .site-title h1 a {
 	height: 5rem;
 	font-size: 1.8rem;
 	line-height: calc(33 / 18);
-	/* padding-left: 10px;
-	padding-right: 1rem; */
 
 	display: flex;
 	align-items: center;
@@ -511,13 +507,6 @@ h3 {
 	}
 }
 
-/* .strengths-image img {
-	width: 100%; 
-	height: auto;
-	display: block;
-	object-fit: cover;
-} */
-
 /* ここからサービス */
 .service {
 	padding-block-start: 6rem;
@@ -531,7 +520,6 @@ h3 {
 
 .grid {
 	display: grid;
-	/* gap: 5rem; */
 	column-gap: min(calc(50 / 1080 * 100vw), 50px);
 
 	grid-template-columns: repeat(3, 1fr);
@@ -667,18 +655,12 @@ h3 {
 	}
 }
 
-/* .news-item-anniv .news-text {
-		@media screen and (max-width: 767px) {
-	white-space: nowrap;
-}
-} */
 .news-text {
 	font-size: 1.7rem;
 	font-weight: 500;
 	flex: 1;
 	column-gap: 24px;
 	text-align: left;
-	/* margin-inline-start: 25px; */
 	line-height: calc(30 / 17);
 
 
@@ -780,9 +762,7 @@ h3 {
 
 .tel-link {
 	display: flex;
-	/* align-items: flex-start; */
 	margin-block-start: 1rem;
-	/* align-items: end; */
 	align-items: center;
 
 	@media screen and (max-width: 767px) {
@@ -795,11 +775,9 @@ h3 {
 	font-weight: 500;
 	line-height: calc(27 / 18);
 
-	/* padding-block-start: 1rem; */
 	@media screen and (max-width: 767px) {
 		font-size: 1.6rem;
 		line-height: calc(27 / 16);
-		/* padding-block-start: 1.2rem; */
 	}
 }
 
@@ -818,11 +796,6 @@ h3 {
 	display: flex;
 	align-items: flex-start;
 	margin-block-start: 0.8rem;
-	/* padding-block-end: 2.6rem; */
-	/* @media screen and (max-width: 767px) {
-		margin-block-end: 1.5rem;
-		padding-block-end: unset;
-	} */
 }
 
 .mail {
@@ -921,8 +894,6 @@ h3 {
 	@media screen and (max-width: 767px) {
 		margin-block-end: 1.5rem;
 	}
-
-
 }
 
 .form__item {
