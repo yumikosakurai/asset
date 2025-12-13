@@ -167,8 +167,6 @@ a:hover {
 	font-size: 1.4rem;
 	display: flex;
 	align-items: center;
-	/* padding-left: 4px; */
-	/* padding-right: 4px; */
 }
 
 .header__nav a {
@@ -425,7 +423,6 @@ h3 {
 }
 
 .strengths-item-fir {
-	/* column-gap: min(calc(45 / 1080 * 100vw), 45px); */
 
 	@media screen and (max-width: 767px) {
 		row-gap: 3rem;
@@ -440,7 +437,6 @@ h3 {
 .strengths-item-re {
 	flex-direction: row-reverse;
 	margin-block-start: 5rem;
-	/* column-gap: min(calc(44 / 1080 * 100vw), 44px); */
 
 	@media screen and (max-width: 767px) {
 		max-width: 767px;
@@ -457,7 +453,6 @@ h3 {
 }
 
 .strengths-item-se {
-	/* column-gap: min(calc(43 / 1080 * 100vw), 43px); */
 	margin-block-start: 5rem;
 
 	@media screen and (max-width: 767px) {
@@ -524,7 +519,6 @@ h3 {
 
 .grid {
 	display: grid;
-	/* column-gap: calc(50 / 1080 * 100vw); */
 	column-gap: 5.6%;
 
 	grid-template-columns: repeat(3, 1fr);
@@ -694,8 +688,6 @@ h3 {
 .contact-info {
 	display: flex;
 	align-items: stretch;
-	/* 高さを揃える！ */
-	/* column-gap: min(calc(46 / 1080 * 100vw), 46px); */
 	column-gap: 5.2%;
 	margin-block-start: 4.4rem;
 
@@ -956,7 +948,6 @@ h3 {
 .form__textarea {
 	flex: 1;
 	font-weight: normal;
-	/* padding-block-start: 3px; */
 }
 
 input[type="text"],
