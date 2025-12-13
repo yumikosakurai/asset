@@ -15,12 +15,13 @@ html {
 
 body {
 	font-family: "Noto Sans JP", "sans-serif", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-		"Yu Gothic", "Meiryo", "sans-serif";
+		"Yu Gothic", "Meiryo";
 	font-optical-sizing: auto;
 	font-weight: 700;
 	font-style: normal;
 	color: #505050;
 	line-height: calc(30 / 17);
+	letter-spacing: 0;
 }
 
 html,
@@ -157,7 +158,7 @@ a:hover {
 
 .header__nav ul {
 	display: flex;
-	column-gap: 0.2rem;
+	column-gap: 11px;
 	align-items: center;
 }
 
@@ -166,8 +167,8 @@ a:hover {
 	font-size: 1.4rem;
 	display: flex;
 	align-items: center;
-	padding-left: 4px;
-	padding-right: 4px;
+	/* padding-left: 4px; */
+	/* padding-right: 4px; */
 }
 
 .header__nav a {
@@ -306,9 +307,11 @@ main {
 	@media screen and (max-width: 885px) {
 		font-size: 1.5rem;
 	}
+	@media screen and (max-width: 767px) {
+		text-align: left;
+	}
 
 	@media screen and (max-width: 727px) {
-		text-align: left;
 		font-size: 1.6rem;
 		line-height: calc(30 / 16);
 		margin-block-start: 1.6rem;
@@ -380,6 +383,7 @@ main {
 	justify-content: center;
 	max-width: 880px;
 	margin: 0 auto;
+	column-gap: 5%;
 
 	@media screen and (max-width: 767px) {
 		flex-direction: column-reverse;
@@ -421,7 +425,7 @@ h3 {
 }
 
 .strengths-item-fir {
-	column-gap: min(calc(45 / 1080 * 100vw), 45px);
+	/* column-gap: min(calc(45 / 1080 * 100vw), 45px); */
 
 	@media screen and (max-width: 767px) {
 		row-gap: 3rem;
@@ -436,7 +440,7 @@ h3 {
 .strengths-item-re {
 	flex-direction: row-reverse;
 	margin-block-start: 5rem;
-	column-gap: min(calc(44 / 1080 * 100vw), 44px);
+	/* column-gap: min(calc(44 / 1080 * 100vw), 44px); */
 
 	@media screen and (max-width: 767px) {
 		max-width: 767px;
@@ -453,7 +457,7 @@ h3 {
 }
 
 .strengths-item-se {
-	column-gap: min(calc(43 / 1080 * 100vw), 43px);
+	/* column-gap: min(calc(43 / 1080 * 100vw), 43px); */
 	margin-block-start: 5rem;
 
 	@media screen and (max-width: 767px) {
@@ -520,7 +524,8 @@ h3 {
 
 .grid {
 	display: grid;
-	column-gap: min(calc(50 / 1080 * 100vw), 50px);
+	/* column-gap: calc(50 / 1080 * 100vw); */
+	column-gap: 5.6%;
 
 	grid-template-columns: repeat(3, 1fr);
 	text-align: center;
@@ -690,7 +695,8 @@ h3 {
 	display: flex;
 	align-items: stretch;
 	/* 高さを揃える！ */
-	column-gap: min(calc(46 / 1080 * 100vw), 46px);
+	/* column-gap: min(calc(46 / 1080 * 100vw), 46px); */
+	column-gap: 5.2%;
 	margin-block-start: 4.4rem;
 
 	@media screen and (max-width: 767px) {
@@ -887,21 +893,30 @@ h3 {
 		margin-block-start: 3rem;
 	}
 }
+.form .form__items ul {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3rem;
+	@media screen and (max-width: 767px) {
+  	row-gap: 1.6rem;
+		}
+}
 
 .form .form__items ul li {
-	margin-block-end: 30px;
 
 	@media screen and (max-width: 767px) {
-		margin-block-end: 1.5rem;
+		/* margin-block-end: 1.6rem; */
 	}
 }
 
 .form__item {
 	display: flex;
 	column-gap: 3rem;
+	align-items: flex-start;
 
 	@media screen and (max-width: 767px) {
 		display: block;
+		
 	}
 }
 
@@ -931,7 +946,6 @@ h3 {
 
 .form__la {
 	align-items: unset;
-	padding-block-start: 0.5rem;
 }
 
 .form__input {
@@ -941,9 +955,8 @@ h3 {
 
 .form__textarea {
 	flex: 1;
-	line-height: 0;
 	font-weight: normal;
-	padding-block-start: 3px;
+	/* padding-block-start: 3px; */
 }
 
 input[type="text"],
@@ -977,13 +990,13 @@ textarea {
 }
 
 .contact__button {
-	margin-block-start: 4.6rem;
+	margin-block-start: 5rem;
 	margin-inline: auto;
 	width: 200px;
 
 	@media screen and (max-width: 767px) {
 		width: 33.5rem;
-		margin-block-start: 4.7rem;
+		margin-block-start: 5rem;
 	}
 
 	@media screen and (max-width: 370px) {
