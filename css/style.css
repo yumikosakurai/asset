@@ -98,7 +98,7 @@ a:hover {
 	width: 100%;
 	max-width: 1000px;
 	padding-inline-start: 60px;
-	padding-inline-end: 16px;
+	padding-inline-end: 60px;
 	margin-inline: auto;
 
 	@media screen and (max-width: 1000px) {
@@ -611,7 +611,7 @@ h3 {
 
 .news-link {
 	display: flex;
-	gap: 25px;
+	gap: calc(25 / 880 * 100%);
 	width: 100%;
 	transition: opacity 0.3s ease;
 	cursor: pointer;
@@ -903,7 +903,7 @@ h3 {
 
 .form__item {
 	display: flex;
-	column-gap: 3rem;
+	column-gap: calc(30 /880 * 100%);
 	align-items: flex-start;
 
 	@media screen and (max-width: 767px) {
